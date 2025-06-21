@@ -1,5 +1,6 @@
 package main
 
+// protecting fields with lowercase names, while providing access through methods (Encapsulation)
 type AnimalBase struct {
 	name    string
 	age     int

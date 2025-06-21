@@ -3,7 +3,7 @@ package main
 import "strconv"
 
 type Fish struct {
-	AnimalBase
+	AnimalBase    // embedding AnimalBase (composition)
 	swimmingSpeed int
 }
 

@@ -13,7 +13,7 @@ func main() {
 		{AnimalBase: AnimalBase{name: "Nemo", age: 2, habitat: "Coral Reef"}, swimmingSpeed: 10},
 		{AnimalBase: AnimalBase{name: "Dory", age: 3, habitat: "Ocean"}, swimmingSpeed: 12},
 	}
-	zoo := []Animal{}
+	zoo := []Animal{} // using the Animal interface to hold different animal types (polymorphism)
 	for _, lion := range lions {
 		zoo = append(zoo, lion)
 	}
