@@ -34,3 +34,5 @@ Change an animal’s name and age using encapsulated methods.
 
 Demonstrate different behaviors for different animals using polymorphism.
 
+https://www.linkedin.com/posts/prince-bhati-3b6437175_golang-lowleveldesign-systemdesign-activity-7342156975423614976-ZK9A?utm_source=share&utm_medium=member_desktop&rcm=ACoAACmIZHoBbcKAaYyvCdFmvjmT6JT5hLUHqCw
+
