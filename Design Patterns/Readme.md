@@ -2,7 +2,7 @@
 
 - ### Understanding the nature of the problem  
 
- Main goal in this step to determing the nature of the problem  
+  Main goal in this step to determing the nature of the problem  
  we need to ask some questions to ourselves like 
 
 1. is it just a plain object oriented design problem
@@ -22,10 +22,10 @@
   3. Responsibilities can be mapped using SOLID principles (especially SRP).  
 
 - ### Define Relationships and Behaviors  
-Use UML Class Diagram, here our target to make design modular and flexible 
+  Use UML Class Diagram, here our target to make design modular and flexible 
 
-- ### Desginging core classes (interfaces)  
-Have clear responsibilities (Single Responsibility Principle).  
+- ### Desginging core classes (interfaces)     
+   Have clear responsibilities (Single Responsibility Principle).  
 Expose minimal necessary methods (Encapsulation).  
 Use interfaces where future flexibility is needed.  
 
