@@ -1,14 +1,6 @@
 # Systematic Plan to tackle any LLD Problem  
 
-- ### Understanding the nature of the problem  
-
-  Main goal in this step to determing the nature of the problem  
- we need to ask some questions to ourselves like 
-
-1. is it just a plain object oriented design problem
-2. is it process oriented/ workflow like order system/ notification system. 
-3. or is it a state driven (like atm machine etc.)
-4. or is it requires some real time simulation  
+ 
 
 - ### Clarify requirements (functional + non functional )  
   - first we need to understand our core features
