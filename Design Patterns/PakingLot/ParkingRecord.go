@@ -22,9 +22,12 @@ func NewParkingRecord(level int, spot SpotType, vehicle Vehicle) *ParkingRecord 
 func (pr *ParkingRecord) SetExitTime() {
 	pr.exitTime = time.Now()
 }
-func (pr *ParkingRecord) GetDuration() time.Duration {
+func (pr *ParkingRecord) GetDurationHours() float64 {
+	var duration time.Duration
 	if pr.exitTime.IsZero() {
-		return time.Since(pr.entryTime)
+		duration = time.Since(pr.entryTime)
+	} else {
+		duration = pr.exitTime.Sub(pr.entryTime)
 	}
-	return pr.exitTime.Sub(pr.entryTime)
+	return duration.Hours() // returns float64
 }

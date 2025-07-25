@@ -1,20 +1,24 @@
 package main
 
+import (
+	"strconv"
+)
+
 type Level struct {
 	LevelNumber  int
 	ParkingSpots []ParkingSpot
 }
 
 func NewLevel(levelNumber int, large int, compact int, handicapped int) *Level {
-	parkingSpots := make([]ParkingSpot, large+compact+handicapped)
+	parkingSpots := make([]ParkingSpot, 0)
 	for range large {
-		parkingSpots = append(parkingSpots, &LargeSpot{*NewBaseSpot(Large, levelNumber)})
+		parkingSpots = append(parkingSpots, &LargeSpot{*NewBaseSpot(Large, levelNumber, strconv.Itoa(levelNumber)+"-L"+strconv.Itoa(len(parkingSpots)+1))})
 	}
 	for range compact {
-		parkingSpots = append(parkingSpots, &CompactSpot{*NewBaseSpot(Compact, levelNumber)})
+		parkingSpots = append(parkingSpots, &CompactSpot{*NewBaseSpot(Compact, levelNumber, strconv.Itoa(levelNumber)+"-C"+strconv.Itoa(len(parkingSpots)+1))})
 	}
 	for range handicapped {
-		parkingSpots = append(parkingSpots, &HandicappedSpot{*NewBaseSpot(Handicapped, levelNumber)})
+		parkingSpots = append(parkingSpots, &HandicappedSpot{*NewBaseSpot(Handicapped, levelNumber, strconv.Itoa(levelNumber)+"-H"+strconv.Itoa(len(parkingSpots)+1))})
 	}
 
 	return &Level{

@@ -11,6 +11,7 @@ const (
 type ParkingSpot interface {
 	IsAvailable() bool
 	GetSpotType() SpotType
+	GetSpotNumber() string
 	GetVehicle() Vehicle
 	ParkVehicle(vehicle Vehicle) bool
 	RemoveVehicle() Vehicle
@@ -19,22 +20,25 @@ type ParkingSpot interface {
 
 // shared base
 type BaseSpot struct {
+	spotNumber  string
 	levelNumber int
 	isAvailable bool
 	spotType    SpotType
 	vehicle     Vehicle
 }
 
-func NewBaseSpot(spotType SpotType, levelNumber int) *BaseSpot {
+func NewBaseSpot(spotType SpotType, levelNumber int, spotNumber string) *BaseSpot {
 	return &BaseSpot{
 		isAvailable: true,
 		spotType:    spotType,
 		vehicle:     nil,
 		levelNumber: levelNumber,
+		spotNumber:  spotNumber,
 	}
 }
 
 func (bs *BaseSpot) IsAvailable() bool     { return bs.isAvailable }
+func (bs *BaseSpot) GetSpotNumber() string { return bs.spotNumber }
 func (bs *BaseSpot) GetSpotType() SpotType { return bs.spotType }
 func (bs *BaseSpot) GetVehicle() Vehicle   { return bs.vehicle }
 func (bs *BaseSpot) GetLevelNumber() int   { return bs.levelNumber }
